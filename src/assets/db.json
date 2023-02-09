@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Thomas",
+      "lastName": "Cat",
+      "primaryLocation": "BLR",
+      "address": "Bangalore",
+      "permanentAddress": "Mysuru",
+      "grossSalary": 69000,
+      "job": "Analyst",
+      "jobLocation": "Bengaluru"
+    },
+    {
+      "firstName": "Lagger",
+      "lastName": "Kumar",
+      "primaryLocation": "HYD",
+      "address": "Bangalore",
+      "permanentAddress": "Mysuru",
+      "grossSalary": "61000",
+      "job": "FullStack",
+      "jobLocation": "Bengaluru",
+      "id": 2
+    }
+  ],
+  "bankdetails": [
+    {
+      "id": 1,
+      "routingNumber": "091409791",
+      "bankType": "Domestic",
+      "accountNumber": "9128745038629539",
+      "accountType": "Savings",
+      "userId": 1,
+      "accountOwnerName": "Mr. Thomas Freddy Cat",
+      "status": "Active",
+      "primaryBank": true,
+      "nickName": "AMEX New York",
+      "authenticationMethod": "Identity",
+      "transactionType": "OPEN_ACCOUNT",
+      "communicationChannel": "WEB",
+      "user": {
+        "id": 1,
+        "firstName": "Thomas",
+        "lastName": "Cat",
+        "primaryLocation": "BLR",
+        "address": "Bangalore",
+        "permanentAddress": "Mysuru",
+        "grossSalary": 69000,
+        "job": "Analyst",
+        "jobLocation": "Bengaluru"
+      }
+    }
+  ]
+}
