@@ -60,19 +60,19 @@
 
         </thead>
         <tbody>
-            <tr *ngFor="let bank of banks">
+            <tr *ngFor="let bank of banks; let indexOfelement=index;">
                 
-                    <td *ngIf="bank.id===user.id">{{ bank.id }}</td>
-                    <td *ngIf="bank.id===user.id">{{ bank.routingNumber }}</td>
-                    <td *ngIf="bank.id===user.id">{{ bank.bankType}}</td>
-                    <td *ngIf="bank.id===user.id">{{ bank.accountNumber }}</td>
-                    <td *ngIf="bank.id===user.id">{{bank.accountOwnerName}}</td>
-                    <td *ngIf="bank.id===user.id">{{bank.status}}</td>
-                    <td *ngIf="bank.id===user.id">{{bank.nickName}}</td>
-                    <td *ngIf="bank.id===user.id">{{bank.transactionType}}</td>
+                    <td>{{ indexOfelement + 1}}</td>
+                    <td>{{ bank.routingNumber }}</td>
+                    <td>{{ bank.bankType}}</td>
+                    <td>{{ bank.accountNumber }}</td>
+                    <td>{{bank.accountOwnerName}}</td>
+                    <td>{{bank.status}}</td>
+                    <td>{{bank.nickName}}</td>
+                    <td>{{bank.transactionType}}</td>
                     <!-- <td><button type="button" class="btn btn-secondary">View Details</button></td> -->
-                    <td *ngIf="bank.id===user.id"><button type="button" class="btn btn-secondary">Update</button></td>
-                    <td *ngIf="bank.id===user.id"><button type="button" class="btn btn-secondary">Delete</button></td>
+                    <td><button type="button" class="btn btn-secondary">Update</button></td>
+                    <td><button type="button" class="btn btn-secondary">Delete</button></td>
                 
             </tr>
 

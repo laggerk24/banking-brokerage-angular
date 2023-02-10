@@ -17,13 +17,14 @@ export class ViewuserdetailsComponent implements OnInit{
   ngOnInit(): void {
     let userId = this.route.snapshot.paramMap.get('id')
     console.log(userId);
+
     userId && this.userData.getuserbyid(userId).subscribe((data) =>{
       this.user = data;
       console.log(this.user);
     })
-    this.bankData.banks().subscribe((data)=>{
+    this.bankData.banksByUserId(userId).subscribe((data)=>{
       this.banks = data;
-      console.log(this.banks)
+      console.log(`Banks of user id: ${userId}`, this.banks)
     })
   }
   
