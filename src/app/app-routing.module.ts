@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { AdduserComponent } from './adduser/adduser.component';
 import { Page404Component } from './page404/page404.component';
 import { UpdateuserComponent } from './updateuser/updateuser.component';
+import { ViewuserdetailsComponent } from './viewuserdetails/viewuserdetails.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'adduser', component: AdduserComponent },
   {path:'updateuser/:id',component:UpdateuserComponent},
+  {path:'viewuserdetails/:id',component:ViewuserdetailsComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   
   {path:'**', component:Page404Component}

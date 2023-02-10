@@ -1,1 +1,83 @@
-<p>viewuserdetails works!</p>
+<div class="container mt-5">
+    <h2>User Details </h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Job</th>
+                <th>Job Location</th>
+                <th>Primary Location</th>
+                <th>Address</th>
+                <th>Permanent Address</th>
+                <th>Gross Salary</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.firstName }}</td>
+                <td>{{ user.lastName }}</td>
+                <td>{{ user.job }}</td>
+                <td>{{ user.jobLocation }}</td>
+                <td>{{user.primaryLocation}}</td>
+                <td>{{ user.address }}</td>
+                <td>{{ user.permanentAddress }}</td>
+                <td>{{ user.grossSalary }}</td>
+
+
+                <!-- <td><button type="button" class="btn btn-secondary" routerLink="/viewuserdetails/{{user.id}}">View
+                        Details</button></td> -->
+                <td><button type="button" class="btn btn-secondary" routerLink="/updateuser/{{user.id}}">Update</button>
+                </td>
+                <!-- <td><button type="button" class="btn btn-secondary" (click)="delete(user.id)">Delete</button></td> -->
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+<br>
+
+<div class="container mt-5">
+    <h2>User Bank Details</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Routing No</th>
+                <th>Bank Type</th>
+                <th>Account No</th>
+                <th>Account Owner Name</th>
+                <th>Status</th>
+                <th>Nick Name</th>
+                <th>Transaction Type</th>
+            </tr>
+
+
+
+
+        </thead>
+        <tbody>
+            <tr *ngFor="let bank of banks">
+                
+                    <td *ngIf="bank.id===user.id">{{ bank.id }}</td>
+                    <td *ngIf="bank.id===user.id">{{ bank.routingNumber }}</td>
+                    <td *ngIf="bank.id===user.id">{{ bank.bankType}}</td>
+                    <td *ngIf="bank.id===user.id">{{ bank.accountNumber }}</td>
+                    <td *ngIf="bank.id===user.id">{{bank.accountOwnerName}}</td>
+                    <td *ngIf="bank.id===user.id">{{bank.status}}</td>
+                    <td *ngIf="bank.id===user.id">{{bank.nickName}}</td>
+                    <td *ngIf="bank.id===user.id">{{bank.transactionType}}</td>
+                    <!-- <td><button type="button" class="btn btn-secondary">View Details</button></td> -->
+                    <td *ngIf="bank.id===user.id"><button type="button" class="btn btn-secondary">Update</button></td>
+                    <td *ngIf="bank.id===user.id"><button type="button" class="btn btn-secondary">Delete</button></td>
+                
+            </tr>
+
+
+
+        </tbody>
+    </table>
+</div>
