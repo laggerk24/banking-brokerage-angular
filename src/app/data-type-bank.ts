@@ -16,6 +16,6 @@ export interface BanK {
     transactionType: string,
     communicationChannel: string,
     
-
-    
 }
+    
+

@@ -52,7 +52,7 @@
                                     <input type="text" class="form-control" id="firstName" placeholder="First Name"
                                         [(ngModel)]="form.firstName" name="firstName" #firstName="ngModel" required
                                         minlength="1" maxlength="15"
-                                        [ngClass]="{error: firstName.errors && firstName.touched}">
+                                        [ngClass]="{error: firstName.errors && firstName.touched}" >
                                     <div *ngIf="firstName.errors && firstName.touched">
                                         <small class="text-danger" *ngIf="firstName.errors['required']">First Name is
                                             required.</small>

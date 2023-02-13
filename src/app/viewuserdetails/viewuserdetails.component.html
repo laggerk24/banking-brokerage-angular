@@ -12,8 +12,8 @@
                 <th>Address</th>
                 <th>Permanent Address</th>
                 <th>Gross Salary</th>
-
             </tr>
+
         </thead>
         <tbody>
             <tr>
@@ -71,8 +71,8 @@
                     <td>{{bank.nickName}}</td>
                     <td>{{bank.transactionType}}</td>
                     <!-- <td><button type="button" class="btn btn-secondary">View Details</button></td> -->
-                    <td><button type="button" class="btn btn-secondary">Update</button></td>
-                    <td><button type="button" class="btn btn-secondary">Delete</button></td>
+                    <td><button type="button" class="btn btn-secondary" routerLink="/updatebank/{{bank.id}}" >Update</button></td>
+                    <td><button type="button" class="btn btn-secondary" (click)="delete(bank.id)">Delete</button></td>
                 
             </tr>
 
@@ -80,4 +80,5 @@
 
         </tbody>
     </table>
+    <button type="button" class="btn btn-secondary" routerLink="/addbank/{{user.id}}">Add Bank</button>
 </div>

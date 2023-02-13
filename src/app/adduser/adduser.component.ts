@@ -42,10 +42,11 @@ export class AdduserComponent {
         console.log("Results", result)
         alert("User Added Successfully");
         this.router.navigate(['home']);
+        this.showMessage = true;
       }
       
     })
-    this.showMessage = true;
+    
   }
 
   ngOnInit(): void {

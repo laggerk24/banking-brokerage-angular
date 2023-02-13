@@ -13,20 +13,36 @@ import { ActivatedRoute } from '@angular/router';
 export class ViewuserdetailsComponent implements OnInit{
   user:undefined | SignUp;
   banks:undefined | BanK[];
+  
+  userId:any
   constructor(private userData:UserdataService,private bankData:BankdataService,private route:ActivatedRoute){}
   ngOnInit(): void {
-    let userId = this.route.snapshot.paramMap.get('id')
-    console.log(userId);
+    this.userbanklist();
+    
+  }
+  delete(id:number){
+    this.bankData.deleteBank(id).subscribe((value)=>{
+      if(value){
+        console.log(value);
+        alert("User Deleted Successfully");
+        this.userbanklist()
+      }
+  });
+  }
+  userbanklist(){
+    this.userId = this.route.snapshot.paramMap.get('id')
+    console.log(this.userId);
 
-    userId && this.userData.getuserbyid(userId).subscribe((data) =>{
+    this.userId && this.userData.getuserbyid(this.userId).subscribe((data) =>{
       this.user = data;
       console.log(this.user);
     })
-    this.bankData.banksByUserId(userId).subscribe((data)=>{
+    this.bankData.banksByUserId(this.userId).subscribe((data)=>{
       this.banks = data;
-      console.log(`Banks of user id: ${userId}`, this.banks)
+      console.log(`Banks of user id: ${this.userId}`, this.banks)
     })
   }
+
   
 
 

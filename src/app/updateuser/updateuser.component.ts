@@ -12,7 +12,7 @@ import { UserdataService } from '../services/userdata.service';
 })
 export class UpdateuserComponent implements OnInit {
   form : SignUp
-  constructor(private route: ActivatedRoute, private userData: UserdataService) { }
+  constructor(private route: ActivatedRoute, private userData: UserdataService, private router:Router) { }
   ngOnInit(): void {
     let userId = this.route.snapshot.paramMap.get('id')
     console.log(userId);
@@ -30,6 +30,7 @@ export class UpdateuserComponent implements OnInit {
       this.userData.updateuser(data).subscribe((result)=>{
         if(result){
           alert("Product has updated")
+          this.router.navigate(['home']);
         }
       })
   }

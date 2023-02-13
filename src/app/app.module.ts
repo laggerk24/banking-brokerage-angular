@@ -14,7 +14,9 @@ import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { Page404Component } from './page404/page404.component';
 import { UpdateuserComponent } from './updateuser/updateuser.component';
-import { ViewuserdetailsComponent } from './viewuserdetails/viewuserdetails.component'
+import { ViewuserdetailsComponent } from './viewuserdetails/viewuserdetails.component';
+import { AddbankComponent } from './addbank/addbank.component';
+import { UpdatebankComponent } from './updatebank/updatebank.component'
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { ViewuserdetailsComponent } from './viewuserdetails/viewuserdetails.comp
     AdduserComponent,
     Page404Component,
     UpdateuserComponent,
-    ViewuserdetailsComponent
+    ViewuserdetailsComponent,
+    AddbankComponent,
+    UpdatebankComponent
   ],
   imports: [
     BrowserModule,

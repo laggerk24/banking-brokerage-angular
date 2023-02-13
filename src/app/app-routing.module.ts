@@ -8,6 +8,8 @@ import { AdduserComponent } from './adduser/adduser.component';
 import { Page404Component } from './page404/page404.component';
 import { UpdateuserComponent } from './updateuser/updateuser.component';
 import { ViewuserdetailsComponent } from './viewuserdetails/viewuserdetails.component';
+import { AddbankComponent } from './addbank/addbank.component';
+import { UpdatebankComponent } from './updatebank/updatebank.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -17,6 +19,8 @@ const routes: Routes = [
   { path: 'adduser', component: AdduserComponent },
   {path:'updateuser/:id',component:UpdateuserComponent},
   {path:'viewuserdetails/:id',component:ViewuserdetailsComponent},
+  {path:'addbank/:id',component:AddbankComponent},
+  {path:'updatebank/:ID',component:UpdatebankComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   
   {path:'**', component:Page404Component}
