@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="column" *ngFor="let bank of banks; let indexOfelement=index;">
+    <div class="card">
+      <p>ID-{{ indexOfelement + 1}}</p>
+      <p>Routing No.-{{ bank.routingNumber }}</p>
+      <p>Bank Type-{{ bank.bankType}}</p>
+      <p>Account No-{{ bank.accountNumber }}</p>
+      <p>Owner Name-{{bank.accountOwnerName}}</p>
+      <p>Status{{bank.status}}</p>
+      <p>Nick Name-{{bank.nickName}}</p>
+      <p>Primary Bank-{{bank.primaryBank}}</p>
+      <p>Authentication MEthod{{bank.authenticationMethod}}</p>
+      <p>Transaction Type-{{bank.transactionType}}</p>
+      <p>Communication Channel-{{bank.communicationChannel}}</p>
+      <p>{{bank.transactionType}}</p>
+      <button type="button" class="btn btn-warning" routerLink="/updatebank/{{bank.id}}" >Update</button>
+      <br>
+      <button type="button" class="btn btn-danger" (click)="delete(bank.id)">Delete</button>
+    </div>
+  </div>
+
+</div>

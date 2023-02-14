@@ -10,6 +10,7 @@ import { UpdateuserComponent } from './updateuser/updateuser.component';
 import { ViewuserdetailsComponent } from './viewuserdetails/viewuserdetails.component';
 import { AddbankComponent } from './addbank/addbank.component';
 import { UpdatebankComponent } from './updatebank/updatebank.component';
+import { ViewbankdetailsComponent } from './viewbankdetails/viewbankdetails.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path:'viewuserdetails/:id',component:ViewuserdetailsComponent},
   {path:'addbank/:id',component:AddbankComponent},
   {path:'updatebank/:ID',component:UpdatebankComponent},
+  {path:'viewbankdetails/:id',component:ViewbankdetailsComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   
   {path:'**', component:Page404Component}

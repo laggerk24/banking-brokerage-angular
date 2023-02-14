@@ -16,7 +16,8 @@ import { Page404Component } from './page404/page404.component';
 import { UpdateuserComponent } from './updateuser/updateuser.component';
 import { ViewuserdetailsComponent } from './viewuserdetails/viewuserdetails.component';
 import { AddbankComponent } from './addbank/addbank.component';
-import { UpdatebankComponent } from './updatebank/updatebank.component'
+import { UpdatebankComponent } from './updatebank/updatebank.component';
+import { ViewbankdetailsComponent } from './viewbankdetails/viewbankdetails.component'
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { UpdatebankComponent } from './updatebank/updatebank.component'
     UpdateuserComponent,
     ViewuserdetailsComponent,
     AddbankComponent,
-    UpdatebankComponent
+    UpdatebankComponent,
+    ViewbankdetailsComponent
   ],
   imports: [
     BrowserModule,
