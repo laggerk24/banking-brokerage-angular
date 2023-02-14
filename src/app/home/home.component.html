@@ -22,9 +22,9 @@
           <td>{{ user.lastName }}</td>
           <td>{{ user.job }}</td>
           <td>{{user.primaryLocation}}</td>
-          <td><button type="button" class="btn btn-secondary" routerLink="/viewuserdetails/{{user.id}}">View Details</button></td>
-          <td><button type="button" class="btn btn-secondary" routerLink="/updateuser/{{user.id}}">Update</button></td>
-          <td><button type="button" class="btn btn-secondary" (click)="delete(user.id)">Delete</button></td>
+          <td><button type="button" class="btn btn-primary" routerLink="/viewuserdetails/{{user.id}}">View Details</button></td>
+          <td><button type="button" class="btn btn-warning" routerLink="/updateuser/{{user.id}}">Update</button></td>
+          <td><button type="button" class="btn btn-danger" (click)="delete(user.id)">Delete</button></td>
         </tr>
       </tbody>
     </table>

@@ -30,7 +30,7 @@
 
                 <!-- <td><button type="button" class="btn btn-secondary" routerLink="/viewuserdetails/{{user.id}}">View
                         Details</button></td> -->
-                <td><button type="button" class="btn btn-secondary" routerLink="/updateuser/{{user.id}}">Update</button>
+                <td><button type="button" class="btn btn-warning" routerLink="/updateuser/{{user.id}}">Update</button>
                 </td>
                 <!-- <td><button type="button" class="btn btn-secondary" (click)="delete(user.id)">Delete</button></td> -->
             </tr>
@@ -71,8 +71,8 @@
                     <td>{{bank.nickName}}</td>
                     <td>{{bank.transactionType}}</td>
                     <!-- <td><button type="button" class="btn btn-secondary">View Details</button></td> -->
-                    <td><button type="button" class="btn btn-secondary" routerLink="/updatebank/{{bank.id}}" >Update</button></td>
-                    <td><button type="button" class="btn btn-secondary" (click)="delete(bank.id)">Delete</button></td>
+                    <td><button type="button" class="btn btn-warning" routerLink="/updatebank/{{bank.id}}" >Update</button></td>
+                    <td><button type="button" class="btn btn-danger" (click)="delete(bank.id)">Delete</button></td>
                 
             </tr>
 
@@ -80,5 +80,5 @@
 
         </tbody>
     </table>
-    <button type="button" class="btn btn-secondary" routerLink="/addbank/{{user.id}}">Add Bank</button>
+    <button type="button" class="btn btn-primary" routerLink="/addbank/{{user.id}}">Add Bank</button>
 </div>
