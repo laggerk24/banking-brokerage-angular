@@ -1,7 +1,7 @@
 <div class="row">
-  <div class="column" *ngFor="let bank of banks; let indexOfelement=index;">
+  <div class="column" style="margin-top: 40px; margin-left: 40px;" *ngFor="let bank of banks; let indexOfelement=index;">
     <div class="card">
-      <p>ID-{{ indexOfelement + 1}}</p>
+      <p>Bank Account-{{ indexOfelement + 1}}</p>
       <p>Routing No.-{{ bank.routingNumber }}</p>
       <p>Bank Type-{{ bank.bankType}}</p>
       <p>Account No-{{ bank.accountNumber }}</p>
