@@ -17,7 +17,7 @@
             <th>Last Name</th>
             <th>Job</th>
             <th>Primary Location</th>
-            <th colspan="3">Actions</th>
+            <th>Actions</th>
           </tr>
       </thead>
       <tbody>
@@ -27,9 +27,11 @@
           <td>{{ user.lastName }}</td>
           <td>{{ user.job }}</td>
           <td>{{user.primaryLocation}}</td>
-          <td align="center"><button type="button" class="btn btn-primary" routerLink="/viewuserdetails/{{user.id}}">View Details</button></td>
-          <td align="center"><button type="button" class="btn btn-warning" routerLink="/updateuser/{{user.id}}">Update</button></td>
-          <td align="center"><button type="button" class="btn btn-danger" (click)="delete(user.id)">Delete</button></td>
+          <td>
+            <button type="button" class="btn btn-primary" routerLink="/viewuserdetails/{{user.id}}"><i class="far fa-eye"></i></button>&nbsp;
+            <button type="button" class="btn btn-warning" routerLink="/updateuser/{{user.id}}"><i class="far fa-edit"></i></button>&nbsp;
+            <button type="button" class="btn btn-danger" (click)="delete(user.id)"><i class="far fa-trash-alt"></i></button>&nbsp;
+          </td>
         </tr>
       </tbody>
     </table>
