@@ -1,5 +1,5 @@
 <header>
-    <nav >
+    <!-- <nav >
       
       <ul class="abc">
         
@@ -10,7 +10,34 @@
         <li><a routerLink="/contact">Contact</a></li>
         <li><a routerLink="/aboutus">About Us</a></li>
       </ul>
-    </nav>
+    </nav> -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid mx-5 d-flex flex-row align-items-center">
+            <a [routerLink]="['/']" class="navbar-brand">
+                <img src="https://cdn.theforage.com/vinternships/companyassets/m7GusTmDpDcGMcp28/a7QBYATxBtRiExiZ8/1625078690042/DEL_SEC_RGB_aw%20(White%20Logo)v2.png"
+                    height="28px" alt="Deloitte">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a [routerLink]="['/home']" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="['/adduser']" class="nav-link">Add User</a>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="['/aboutus']" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="['/contact']" class="nav-link">Contact</a>
+                </ul>
+             </div>
+        </div>
+    </nav> 
   </header>
   
 
