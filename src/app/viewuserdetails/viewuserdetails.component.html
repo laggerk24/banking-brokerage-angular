@@ -1,87 +1,65 @@
-<div class="container mt-5">
+<div class="container mt-3">
     <h2>User Details </h2>
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Job</th>
-                <th>Job Location</th>
-                <th>Primary Location</th>
-                <th>Address</th>
-                <th>Permanent Address</th>
-                <th>Gross Salary</th>
-            </tr>
-
-        </thead>
-        <tbody>
-            <tr>
-                <td>{{ user.id }}</td>
-                <td>{{ user.firstName }}</td>
-                <td>{{ user.lastName }}</td>
-                <td>{{ user.job }}</td>
-                <td>{{ user.jobLocation }}</td>
-                <td>{{user.primaryLocation}}</td>
-                <td>{{ user.address }}</td>
-                <td>{{ user.permanentAddress }}</td>
-                <td>{{ user.grossSalary }}</td>
-
-
-                <!-- <td><button type="button" class="btn btn-secondary" routerLink="/viewuserdetails/{{user.id}}">View
-                        Details</button></td> -->
-                <td><button type="button" class="btn btn-warning" routerLink="/updateuser/{{user.id}}">Update</button>
-                </td>
-                <!-- <td><button type="button" class="btn btn-secondary" (click)="delete(user.id)">Delete</button></td> -->
-            </tr>
-        </tbody>
-    </table>
-
-</div>
-<br>
-
-<div class="container mt-5">
-    <h2>User Bank Details</h2>
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Routing No</th>
-                <th>Bank Type</th>
-                <th>Account No</th>
-                <th>Account Owner Name</th>
-                <th>Status</th>
-                <th>Nick Name</th>
-                <th>Transaction Type</th>
-            </tr>
-
-
-
-
-        </thead>
-        <tbody>
-            <tr *ngFor="let bank of banks; let indexOfelement=index;">
+    <div class="row mt-3 mb-3">
+        <div
+          class="col-12"
+        >
+          <div class="card p-2 mb-2">
+            <div class="card-body">
+              <div class="d-flex justify-content-evenly">
                 
-                    <td>{{ indexOfelement + 1}}</td>
-                    <td>{{ bank.routingNumber }}</td>
-                    <td>{{ bank.bankType}}</td>
-                    <td>{{ bank.accountNumber }}</td>
-                    <td>{{bank.accountOwnerName}}</td>
-                    <td>{{bank.status}}</td>
-                    <td>{{bank.nickName}}</td>
-                    <td>{{bank.transactionType}}</td>
-                    <!-- <td><button type="button" class="btn btn-secondary">View Details</button></td> -->
-                    <td><button type="button" class="btn btn-warning" routerLink="/updatebank/{{bank.id}}" >Update</button></td>
-                    <td><button type="button" class="btn btn-danger" (click)="delete(bank.id)">Delete</button></td>
+                    <div class="table-responsive mt-3">
+                        <table class="table table-striped" style="width:1000px">
+                          <tbody>
+                            <tr>
+                              <td align="left"><strong>First Name</strong></td>
+                              <td align="left">{{ user.firstName }}</td>
+                            </tr>
+                            <tr>
+                                <td align="left"><strong>Last Name</strong></td>
+                                <td align="left">{{ user.lastName }}</td>
+                            </tr>
+                            <tr>
+                                <td align="left"><strong>Job</strong></td>
+                                <td align="left">{{ user.job }}</td>
+                            </tr>
+                            <tr>
+                                <td align="left"><strong>Job Location</strong></td>
+                                <td align="left">{{ user.jobLocation }}</td>
+                            </tr>
+                            <tr>
+                                <td align="left"><strong>Primary Location</strong></td>
+                                <td align="left">{{ user.primaryLocation }}</td>
+                            </tr>
+                            <tr>
+                                <td align="left"><strong>Address</strong></td>
+                                <td align="left">{{ user.address }}</td>
+                            </tr>
+                            <tr>
+                                <td align="left"><strong>Permanent Address</strong></td>
+                                <td align="left">{{ user.permanentAddress }}</td>
+                            </tr>
+                            <tr>
+                                <td align="left"><strong>Gross Salary</strong></td>
+                                <td align="left">{{ user.grossSalary }}</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                 
-            </tr>
+              </div>
+            </div>
+            <div class="card-footer mx-5">
+                <div class="py-2 d-flex justify-content-evenly">
+                    <button type="button" class="btn btn-warning" routerLink="/updateuser/{{user.id}}">Update User</button>
+                    <button type="button" class="btn btn-success" routerLink="/viewbankdetails/{{user.id}}">View Bank Details</button>
+                    <button type="button" class="btn btn-primary" routerLink="/addbank/{{user.id}}">Add Bank</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-
-
-        </tbody>
-    </table>
-    <button type="button" class="btn btn-primary" routerLink="/viewbankdetails/{{user.id}}">View Bank Details</button><span>&nbsp; &nbsp; </span>
-
-    <button type="button" class="btn btn-primary" routerLink="/addbank/{{user.id}}">Add Bank</button>
     
 </div>
+
