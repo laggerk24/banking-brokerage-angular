@@ -1,6 +1,7 @@
 import { Component , OnInit} from '@angular/core';
 import { UserdataService } from '../services/userdata.service';
 import { SignUp } from '../data-type';
+import { Ng2SearchPipe } from 'ng2-search-filter';
 // import { Router } from '@angular/router';
 
 @Component({
@@ -11,6 +12,7 @@ import { SignUp } from '../data-type';
 
 export class HomeComponent implements OnInit{
   users:undefined | SignUp[];
+  searchText:string =''
   
   constructor(private userData:UserdataService){ }
   ngOnInit(): void {

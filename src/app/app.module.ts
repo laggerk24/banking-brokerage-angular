@@ -18,6 +18,7 @@ import { ViewuserdetailsComponent } from './viewuserdetails/viewuserdetails.comp
 import { AddbankComponent } from './addbank/addbank.component';
 import { UpdatebankComponent } from './updatebank/updatebank.component';
 import { ViewbankdetailsComponent } from './viewbankdetails/viewbankdetails.component'
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ViewbankdetailsComponent } from './viewbankdetails/viewbankdetails.comp
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    Ng2SearchPipeModule
     
   ],
   providers: [],
