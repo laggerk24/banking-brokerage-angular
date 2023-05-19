@@ -18,11 +18,11 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'login', component: LoginComponent },
   { path: 'adduser', component: AdduserComponent },
-  {path:'updateuser/:id',component:UpdateuserComponent},
-  {path:'viewuserdetails/:id',component:ViewuserdetailsComponent},
-  {path:'addbank/:id',component:AddbankComponent},
-  {path:'updatebank/:ID',component:UpdatebankComponent},
-  {path:'viewbankdetails/:id',component:ViewbankdetailsComponent},
+  { path:'updateuser/:id',component:UpdateuserComponent },
+  { path:'viewuserdetails/:id',component:ViewuserdetailsComponent},
+  { path:'addbank/:id',component:AddbankComponent},
+  { path:'updatebank/:ID',component:UpdatebankComponent},
+  { path:'viewbankdetails/:id',component:ViewbankdetailsComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   
   {path:'**', component:Page404Component}
