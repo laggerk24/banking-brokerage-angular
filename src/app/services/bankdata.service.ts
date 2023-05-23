@@ -8,7 +8,7 @@ import { BanK } from '../data-type-bank';
 })
 export class BankdataService {
   // url = "http://localhost:3000/bankdetails";
-  url = "http://localhost:1648/api/Banks";
+  url = "http://localhost:7054/api/Banks";
   constructor(private http:HttpClient) { }
   
   banks(){
