@@ -8,7 +8,7 @@ import { SignUp } from '../data-type';
 export class UserdataService {
   
   // url = "http://localhost:3000/users";
-  url = "http://localhost:7054/api/Users";
+  url = "http://localhost:1648/api/Users";
   constructor(private http:HttpClient) { }
   users()
   {
